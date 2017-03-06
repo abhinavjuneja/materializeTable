@@ -1,0 +1,29 @@
+<div ng-controller='controller' class="">
+<md-content>
+  <md-whiteframe  class="md-whiteframe-3dp loginwhiteframe" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center">
+  <md-toolbar class="md-hue-2 position-toolbar" >
+  <span align="center" class="spantoolbar"> Login</span>
+</md-toolbar>
+<form name="f" class="form-class">
+	
+  <md-input-container>
+  <label>User</label>
+  <input ng-model="user" required>
+</md-input-container>
+<md-input-container>
+<label>Password</label>
+<input ng-model="password" required>
+</md-input-container><br>
+<md-button ng-disabled="f.$invalid" ng-click="login(user,password)" class="md-primary md-raised">Login
+</md-button>
+</form>	
+</md-whiteframe>
+</md-content>
+</div>
+<code class="footer">
+
+  Use UserId: 1 & Password: 1, Created dummy credentials(for eg. UserId: 2 & Password: 2,UserId: 3 & Password: 3 and so on)
+
+</code>
+
+

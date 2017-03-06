@@ -1,0 +1,38 @@
+<div ng-controller="list" ng-if="loggedIn">
+	<md-toolbar layout="row" class="md-hue-2">
+		<div class="md-toolbar-tools">
+			<span>User: {{user}}</span>
+		</div> 
+		<span flex> </span>
+		<md-button ng-if="loggedIn" class="md-primary md-raised" ng-click="logout()">Logout</md-button>
+	</md-toolbar>
+
+	<!-- <div align="center" layout="row" layout-padding layout-wrap layout-fill class="div-class"  ng-cloak> -->
+		<section>
+					
+		  <md-content>
+		    <md-tabs md-dynamic-height md-border-bottom>
+		      <md-tab label="one">
+		        <md-content class="md-padding">
+		          <h1 class="md-display-2">Tab One</h1>
+		          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+		        </md-content>
+		      </md-tab>
+		      <md-tab label="two">
+		        <md-content class="md-padding">
+		          <h1 class="md-display-2">Tab two</h1>
+		          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+		        </md-content>
+		      </md-tab>
+		  </md-tabs>
+		  </md-content>
+		</section>
+
+	<!-- <md-whiteframe  ng-repeat="d in data track by $index" class="md-whiteframe-3dp whiteframeclass" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+	<span>
+		<h3>{{d.id}}</h3>
+		<h4>{{d.title}}</h4>
+		<p>{{d.body}}</p></span>
+	</md-whiteframe> -->
+	<!-- </div> -->
+</div>

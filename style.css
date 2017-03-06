@@ -1,0 +1,57 @@
+.css-form input.ng-invalid.ng-prestine {
+	background-color: #FA787E;
+}
+
+.css-form input.ng-valid.ng-touched {
+	background-color: #78FA89;
+}
+.err{
+	color: #FA787E;
+}
+.whiteframeclass{
+	margin: 7px;
+	background-color: #f6f6f6;
+}
+.loginwhiteframe{
+	background-color: #f6f6f6; 
+	margin-right:50px;
+}
+.position-toolbar{
+	position:absolute; 
+	width:435px;
+}
+.spantoolbar{
+	margin:20px;
+}
+.form-class{
+	margin-top:100px;
+	margin-left:25px;
+}
+.footer{
+	margin-bottom:0px;
+	color:#b2b2b2;
+}
+.div-class{
+	padding-bottom: 32px;
+	margin-left:150px;
+	 margin-right:150px;
+}
+
+.margin{
+	margin-left:20px;
+	 margin-right:20px;
+	 margin:20px;
+	 width:1200px;
+}
+.widthDef{
+	width:1260px;
+}
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6;
+    border: 1px solid #e1e1e1; }
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background: white; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
