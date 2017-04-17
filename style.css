@@ -55,3 +55,22 @@
       background: white; }
   .tabsdemoDynamicHeight md-content h1:first-child {
     margin-top: 0; }
+
+
+ .side{
+ 	width:230px;
+ }
+@keyframes transit{
+	from {
+		width:100%;
+	} to {
+		width:83.72%;
+	}
+}
+.trans{
+	float:right;
+	position:relative;
+	animation:transit 1s;
+
+
+}

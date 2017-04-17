@@ -13,30 +13,35 @@ angular.module('test')
 					}
 				});
 				var createTable=function($scope,element,attr){
+					console.log(attr.config);
 					rowLength=$scope.data.length;
 					console.log(rowLength)
 					columns=[];
-					dumb="<table><tr>";
+					dumb="<md-card><md-list><md-list-item>";
 					for(row of $scope.data){
 						columns=Object.keys(row);
 					}
+					
+					width=100/columns.length;
+					style="display: table-cell;width:"+width+"%;padding-left:1.8%;padding-right:1.8%"
 					for(header of columns){
-						dumb+="<th>"+header+"</th>";
+						dumb+="<div style='"+style+"' class='md-headline'>"+header+"</div>";
 					}
-					dumb+="</tr>";
+					dumb+=" <md-divider></md-divider></md-list-item>";
 					for(row of $scope.data){
-						dumb+="<tr>"
+						dumb+="<md-list-item><div style='display: table; width: 100%;'>"
+						
 						for(data of columns){
 							if(!row.hasOwnProperty(data)){
-								dumb+="<td></td>"
+								dumb+="<div style='"+style+"'></div>"
 							}
 							else{
-								dumb+="<td>"+row["" + data ]+"</td>";
+								dumb+="<div style='"+style+"'>"+row["" + data ]+"</div>";
 							}
 						}
-						dumb+="</tr>"
+						dumb+="</div></md-list-item> <md-divider></md-divider>"
 					}
-					dumb+="</table>";
+					dumb+="</md-list></md-card>";
 					console.log(dumb);
 
 					angular.element(document.querySelector('.create')).append(dumb);
