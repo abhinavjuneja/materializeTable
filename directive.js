@@ -13,18 +13,22 @@ angular.module('test')
 					}
 				});
 				var createTable=function($scope,element,attr){
-					console.log(attr.config);
+					
 					rowLength=$scope.data.length;
-					console.log(rowLength)
+					attr.config=angular.fromJson(attr.config);
 					columns=[];
 					dumb="<md-card><md-list><md-list-item>";
 					for(row of $scope.data){
 						columns=Object.keys(row);
 					}
-					
 					width=100/columns.length;
 					style="width:"+width+"%;padding-left:1.8%;padding-right:1.8%"
 					for(header of columns){
+
+						if(angular.fromJson(attr.config).hasOwnProperty(''+header)){
+						
+							header=attr.config[''+header]
+						}
 						dumb+="<div style='"+style+"' class='md-headline'>"+header+"</div>";
 					}
 					dumb+=" <md-divider></md-divider></md-list-item>";
@@ -42,7 +46,7 @@ angular.module('test')
 						dumb+="</div></md-list-item> <md-divider></md-divider>"
 					}
 					dumb+="</md-list></md-card>";
-					console.log(dumb);
+
 					angular.element(document.querySelector('.create')).empty();
 					
 					angular.element(document.querySelector('.create')).append(dumb);
