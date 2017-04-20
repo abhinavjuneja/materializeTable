@@ -23,27 +23,28 @@ angular.module('test')
 					}
 					
 					width=100/columns.length;
-					style="display: table-cell;width:"+width+"%;padding-left:1.8%;padding-right:1.8%"
+					style="width:"+width+"%;padding-left:1.8%;padding-right:1.8%"
 					for(header of columns){
 						dumb+="<div style='"+style+"' class='md-headline'>"+header+"</div>";
 					}
 					dumb+=" <md-divider></md-divider></md-list-item>";
 					for(row of $scope.data){
-						dumb+="<md-list-item><div style='display: table; width: 100%;'>"
+						dumb+="<md-list-item class='hover'><div style='display: flex; width: 100%; max-height:3.55%;min-height:3.55%'>"
 						
 						for(data of columns){
 							if(!row.hasOwnProperty(data)){
-								dumb+="<div style='"+style+"'></div>"
+								dumb+="<div style='"+style+";max-width:33.33%; overflow: hidden;text-overflow: ellipsis; max-height:3.55%;min-height:3.55%  '></div>"
 							}
 							else{
-								dumb+="<div style='"+style+"'>"+row["" + data ]+"</div>";
+								dumb+="<div style='"+style+";max-width:33.33%; overflow: hidden;text-overflow: ellipsis;max-height:3.55%;min-height:3.55%'>"+row["" + data ]+"</div>";
 							}
 						}
 						dumb+="</div></md-list-item> <md-divider></md-divider>"
 					}
 					dumb+="</md-list></md-card>";
 					console.log(dumb);
-
+					angular.element(document.querySelector('.create')).empty();
+					
 					angular.element(document.querySelector('.create')).append(dumb);
 					angular.noop();
 					
