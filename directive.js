@@ -19,7 +19,12 @@ angular.module('test')
 					columns=[];
 					dumb="<md-card><md-list><md-list-item>";
 					for(row of $scope.data){
-						columns=Object.keys(row);
+						for(head of Object.keys(row)){
+							if(!columns.includes(head)){
+								console.log(head)
+								columns.push(head);
+							}
+						}
 					}
 					width=100/columns.length;
 					style="width:"+width+"%;padding-left:1.8%;padding-right:1.8%"
