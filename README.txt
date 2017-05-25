@@ -22,5 +22,5 @@ Materialize table Directive:
 				config sets the header of the table
 
 					$scope.config={"id":"ID",
-						"newThang":"Second Column"
+						"message":"Message"
 					};
